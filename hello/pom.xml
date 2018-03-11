@@ -23,9 +23,17 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.7</java.version>
         <spring-cloud.version>Brixton.SR5</spring-cloud.version>
+        <hello-service-api.version>0.0.1-SNAPSHOT</hello-service-api.version>
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.bigbig</groupId>
+            <artifactId>hello-service-api</artifactId>
+            <version>${hello-service-api.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
