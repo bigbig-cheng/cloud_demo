@@ -36,7 +36,7 @@ public class ConsumerController {
         return sb.toString();
     }
 
-    @RequestMapping(value="/feign-consumer32", method = RequestMethod.GET)
+    @RequestMapping(value="/feign-consumer3", method = RequestMethod.GET)
     public String helloConsumer3(){
         StringBuilder sb = new StringBuilder();
         sb.append(helloService.hello()).append("\r\n")
