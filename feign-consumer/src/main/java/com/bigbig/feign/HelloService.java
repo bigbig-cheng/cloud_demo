@@ -1,6 +1,8 @@
 package com.bigbig.feign;
 
 import com.bigbig.core.bean.User;
+import com.bigbig.feign.config.HelloServiceConfig;
+import com.bigbig.feign.fallback.HelloServiceFallback;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -8,7 +10,11 @@ import org.springframework.web.bind.annotation.*;
  * Created by doufu on 2018/3/11.
  */
 
-@FeignClient("hello-service")
+@FeignClient(
+        value = "hello-service",
+        configuration = HelloServiceConfig.class,
+        fallback = HelloServiceFallback.class
+    )
 public interface HelloService {
 
     @RequestMapping("/hello")
