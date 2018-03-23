@@ -2,5 +2,5 @@
 *.class
 *.cmd
 *.class
-.idea
-target
+.idea/
+target/
